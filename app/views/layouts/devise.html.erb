@@ -4,9 +4,11 @@
     <title>Mots d'enfants</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= stylesheet_link_tag "devise", media: "all" %>
     <%= stylesheet_link_tag "variables", media: "all" %>
+    <%= javascript_importmap_tags %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   </head>
