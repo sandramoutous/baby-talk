@@ -1,0 +1,12 @@
+{
+  "settings": {},
+  "rules": [
+    {
+      "patterns": [".*"],
+      "properties": {
+        "context": "default",
+        "uri": "https://mots-denfants.onrender.com/*"
+      }
+    }
+  ]
+}
