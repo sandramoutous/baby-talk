@@ -40,7 +40,8 @@ export default class extends BridgeComponent {
       this.recorder.start()
       this.buttonTarget.textContent = "⏹ Arrêter"
     } catch (error) {
-      this.buttonTarget.textContent = "Micro indisponible"
+      console.error("Recorder error:", error.name, error.message)
+      this.buttonTarget.textContent = `Erreur : ${error.name}`
     }
   }
 
