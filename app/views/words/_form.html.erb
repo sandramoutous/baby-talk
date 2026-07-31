@@ -24,23 +24,6 @@
     <%= f.file_field :audio, accept: "audio/*" %>
   </div>
 
-  <div data-controller="bridge--recorder">
-    <%= form.file_field :audio, accept: "audio/*",
-          data: { "bridge--recorder-target": "input" },
-          style: "display: none;" %>
-
-    <button type="button"
-            class="btn-secondary"
-            data-action="bridge--recorder#toggle"
-            data-bridge--recorder-target="button">
-      🎤 Enregistrer
-    </button>
-
-    <audio controls
-          data-bridge--recorder-target="preview"
-          class="hidden"></audio>
-  </div>
-
   <div class="actions">
     <%= f.submit "Enregistrer", class: "btn-primary" %>
   </div>
