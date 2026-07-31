@@ -24,7 +24,9 @@
     <%= f.file_field :audio, accept: "audio/*" %>
   </div>
 
-  <div data-controller="bridge--recorder">
+  <!--
+  TODO évolution : enregistrement micro direct
+   <div data-controller="bridge--recorder">
     <%= f.file_field :audio, accept: "audio/*",
           data: { "bridge--recorder-target": "input" },
           style: "display: none;" %>
@@ -40,7 +42,7 @@
           data-bridge--recorder-target="preview"
           class="hidden"></audio>
   </div>
-
+  -->
   <div class="actions">
     <%= f.submit "Enregistrer", class: "btn-primary" %>
   </div>
