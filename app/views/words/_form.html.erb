@@ -25,7 +25,7 @@
   </div>
 
   <div data-controller="bridge--recorder">
-    <%= form.file_field :audio, accept: "audio/*",
+    <%= f.file_field :audio, accept: "audio/*",
           data: { "bridge--recorder-target": "input" },
           style: "display: none;" %>
 
