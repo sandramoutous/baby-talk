@@ -1,0 +1,34 @@
+<style>
+  .danger-zone {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 1px solid #e8c4b8;
+  border-radius: 14px;
+}
+
+.danger-zone h3 { color: #b03a2e; margin-top: 0; }
+
+.btn-danger {
+  background: #b03a2e;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+</style>
+
+<div class="danger-zone">
+  <h3>Supprimer mon compte</h3>
+  <p>
+    Cette action supprime définitivement votre compte, les fiches de vos enfants,
+    tous les mots enregistrés et les fichiers audio associés.
+    Elle est irréversible.
+  </p>
+  <%= button_to "Supprimer définitivement mon compte",
+        registration_path(:user),
+        method: :delete,
+        class: "btn-danger",
+        data: { turbo_confirm: "Supprimer définitivement votre compte et toutes vos données ? Cette action est irréversible." } %>
+</div>

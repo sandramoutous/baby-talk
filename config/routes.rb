@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   resources :children do
     resources :words, only: [ :new, :create, :edit, :update, :destroy ]
   end
+  get "privacy_policy", to: "pages#privacy_policy"
+  get "general_terms", to: "pages#general_terms"
+  get "account_deletion", to: "pages#account_deletion"
 end

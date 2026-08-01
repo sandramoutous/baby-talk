@@ -1,0 +1,105 @@
+<% content_for :title, "Supprimer mon compte — Mots d'enfants" %>
+
+<div class="legal">
+
+  <%= link_to "← Retour à l'accueil", root_path, class: "legal-back" %>
+
+  <h1>Supprimer mon compte et mes données</h1>
+
+  <p class="legal-meta">
+    Application concernée : <strong>Mots d'enfants</strong><br>
+    Éditeur : MOUTOUSSAMY Marie Sandra
+  </p>
+
+  <p>Cette page décrit comment demander la suppression de votre compte Mots d'enfants et de l'ensemble des données qui y sont rattachées. Elle est accessible sans installer l'application et sans être connecté.</p>
+
+  <div class="legal-warning">
+    <p><strong>La suppression est définitive.</strong> Les mots enregistrés, les fiches de vos enfants et les enregistrements sonores associés ne pourront pas être restaurés. Si vous souhaitez en conserver une trace, pensez à les recopier avant de lancer la procédure.</p>
+  </div>
+
+  <h2 id="depuis-application">Supprimer votre compte depuis l'application</h2>
+
+  <ol class="legal-steps">
+    <li>Connectez-vous à votre compte, depuis l'application mobile ou depuis <a href="https://mots-denfants.onrender.com">le site web</a>.</li>
+    <li>Ouvrez le menu de votre compte, en haut à droite de l'écran.</li>
+    <li>Sélectionnez <strong>Mon compte</strong>.</li>
+    <li>En bas de la page, choisissez <strong>Supprimer définitivement mon compte</strong>.</li>
+    <li>Confirmez la suppression dans la fenêtre qui s'affiche.</li>
+  </ol>
+
+  <p>La suppression est prise en compte immédiatement : votre compte devient inaccessible et vos données sont retirées du service.</p>
+
+  <h2 id="par-courriel">Si vous ne pouvez plus accéder à votre compte</h2>
+
+  <p>Mot de passe oublié, adresse électronique qui n'est plus valide, application désinstallée : vous pouvez demander la suppression par courriel, sans avoir à vous reconnecter.</p>
+
+  <p>Adressez votre demande à <strong>studiowizima@gmail.com</strong> en indiquant l'adresse électronique associée au compte à supprimer.</p>
+
+  <p>Votre demande sera traitée dans un délai maximal d'un (1) mois à compter de sa réception, conformément à l'article 12.3 du Règlement général sur la protection des données. En cas de doute raisonnable sur votre identité, un justificatif pourra vous être demandé ; il sera supprimé dès la vérification effectuée.</p>
+
+  <h2 id="donnees-supprimees">Quelles données sont supprimées</h2>
+
+  <p>La suppression du compte entraîne celle de l'ensemble des données suivantes :</p>
+
+  <div class="legal-table-wrapper">
+    <table>
+      <thead>
+        <tr><th>Donnée</th><th>Sort</th><th>Délai</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Adresse électronique et identifiants de connexion</td>
+          <td>Supprimées</td>
+          <td>Trente (30) jours au plus</td>
+        </tr>
+        <tr>
+          <td>Fiches enfants (prénom ou surnom)</td>
+          <td>Supprimées</td>
+          <td>Trente (30) jours au plus</td>
+        </tr>
+        <tr>
+          <td>Mots enregistrés, significations, contextes et dates</td>
+          <td>Supprimés</td>
+          <td>Trente (30) jours au plus</td>
+        </tr>
+        <tr>
+          <td>Enregistrements sonores déposés</td>
+          <td>Supprimés du service de stockage</td>
+          <td>Trente (30) jours au plus</td>
+        </tr>
+        <tr>
+          <td>Journaux techniques de connexion</td>
+          <td>Supprimés à l'expiration de leur durée de conservation</td>
+          <td>Trente (30) jours au plus</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="sauvegardes">Cas particulier des sauvegardes</h2>
+
+  <p>Vos données disparaissent du service dès la suppression de votre compte. Elles peuvent toutefois subsister quelque temps au sein des sauvegardes chiffrées constituées avant votre demande. Ces sauvegardes ne sont ni consultées ni exploitées : elles sont conservées de manière isolée, et vos données en sont définitivement effacées à l'expiration du cycle de rotation, soit au bout de 30 jours maximum.</p>
+
+  <p>Aucune donnée n'est conservée au-delà de ces délais. Le service ne donnant lieu à aucune facturation, il n'existe aucun archivage à des fins comptables ou probatoires.</p>
+
+  <h2 id="autres-droits">Vos autres droits</h2>
+
+  <p>La suppression du compte n'est pas votre seule option. Vous pouvez également, sans supprimer l'ensemble de votre compte :</p>
+
+  <ul>
+    <li>supprimer un mot en particulier, ce qui retire aussi l'enregistrement sonore associé ;</li>
+    <li>supprimer la fiche d'un enfant et tous les mots qui s'y rattachent ;</li>
+    <li>modifier votre adresse électronique ou votre mot de passe ;</li>
+    <li>demander une copie de vos données, ou leur portabilité dans un format réutilisable.</li>
+  </ul>
+
+  <p>L'ensemble de vos droits est détaillé dans la <%= link_to "politique de confidentialité", privacy_policy_path %>.</p>
+
+  <h2 id="contact">Contact</h2>
+
+  <div class="legal-contact">
+    <p><strong>MOUTOUSSAMY Marie Sandra</strong></p>
+    <p>Courriel : <strong>studiowizima@gmail.com</strong></p>
+  </div>
+
+</div>

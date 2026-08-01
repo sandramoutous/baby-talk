@@ -266,3 +266,199 @@ body {
 .dropdown-item:hover {
   background: #f4f1ea;
 }
+
+/* Pages légales — politique de confidentialité, CGU, suppression de compte */
+.legal {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+  font-family: "Nunito", system-ui, sans-serif;
+  color: #2b1e1a;
+  line-height: 1.7;
+}
+
+.legal h1 {
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-size: 2rem;
+  color: #c85c33;
+  margin-bottom: 0.5rem;
+}
+
+.legal h2 {
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-size: 1.35rem;
+  color: #2b1e1a;
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ebe3d7;
+  scroll-margin-top: 1.5rem;
+}
+
+.legal h3 {
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-size: 1.05rem;
+  color: #c85c33;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.legal h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.legal p { margin: 0 0 1rem; }
+.legal ul, .legal ol { margin: 0 0 1rem; padding-left: 1.25rem; }
+.legal li { margin-bottom: 0.4rem; }
+.legal strong { font-weight: 700; }
+.legal a { color: #c85c33; }
+
+.legal-meta {
+  color: #7a6a60;
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+
+.legal-toc {
+  background: #faf3ea;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.legal-toc ol { margin: 0; padding-left: 1.25rem; }
+.legal-toc li { margin-bottom: 0.3rem; }
+.legal-toc a { text-decoration: none; }
+.legal-toc a:hover { text-decoration: underline; }
+
+.legal-table-wrapper {
+  overflow-x: auto;
+  margin: 0 0 1.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.legal table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 460px;
+}
+
+.legal th {
+  background: #faf3ea;
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  font-weight: 700;
+  border-bottom: 2px solid #ebe3d7;
+}
+
+.legal td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #ebe3d7;
+  vertical-align: top;
+}
+
+.legal-contact {
+  background: #faf3ea;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.legal-contact p { margin-bottom: 0.25rem; }
+
+.legal-steps {
+  counter-reset: legal-step;
+  list-style: none;
+  padding-left: 0;
+}
+
+.legal-steps li {
+  counter-increment: legal-step;
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-steps li::before {
+  content: counter(legal-step);
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #c85c33;
+  color: #fff;
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.legal-warning {
+  background: #fdf0ea;
+  border-left: 4px solid #c85c33;
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.25rem;
+  margin: 0 0 1.5rem;
+}
+
+.legal-warning p:last-child { margin-bottom: 0; }
+
+.legal-back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #c85c33;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.legal-back:hover { text-decoration: underline; }
+
+/* Repères temporaires — supprimer cette règle une fois tous les champs renseignés */
+.a-completer {
+  background: #fff3cd;
+  padding: 0 0.25rem;
+  border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+  .legal { padding: 1.5rem 1rem 3rem; }
+  .legal h1 { font-size: 1.6rem; }
+  .legal h2 { font-size: 1.2rem; margin-top: 2.25rem; }
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 1.25rem;
+  border-top: 1px solid #ebe3d7;
+  text-align: center;
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 0.85rem;
+}
+
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.site-footer-links a {
+  color: #c85c33;
+  text-decoration: none;
+}
+
+.site-footer-links a:hover { text-decoration: underline; }
+
+.site-footer-credit { color: #7a6a60; margin: 0; }
+
