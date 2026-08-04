@@ -5,7 +5,7 @@
       "patterns": [".*"],
       "properties": {
         "context": "default",
-        "uri": "https://mots-denfants.onrender.com/*"
+        "uri": "https://mots-denfants.fr/*"
       }
     }
   ]
