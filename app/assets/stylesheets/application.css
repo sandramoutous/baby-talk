@@ -422,13 +422,6 @@ body {
 
 .legal-back:hover { text-decoration: underline; }
 
-/* Repères temporaires — supprimer cette règle une fois tous les champs renseignés */
-.a-completer {
-  background: #fff3cd;
-  padding: 0 0.25rem;
-  border-radius: 3px;
-}
-
 @media (max-width: 600px) {
   .legal { padding: 1.5rem 1rem 3rem; }
   .legal h1 { font-size: 1.6rem; }
