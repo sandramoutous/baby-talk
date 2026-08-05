@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :children do
     resources :words, only: [ :new, :create, :edit, :update, :destroy ]
   end
-  get "privacy_policy", to: "pages#privacy_policy"
-  get "general_terms", to: "pages#general_terms"
-  get "account_deletion", to: "pages#account_deletion"
+  get "politique-de-confidentialite", to: "pages#privacy_policy",    as: :privacy_policy
+  get "conditions-utilisation",       to: "pages#general_terms",     as: :general_terms
+  get "suppression-compte",           to: "pages#account_deletion",  as: :account_deletion
 end
