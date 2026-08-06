@@ -43,8 +43,8 @@
               </svg>
             </summary>
             <div class="account-dropdown">
-              <%= link_to "Mon compte", edit_user_registration_path, class: "dropdown-item" %>
-              <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item dropdown-item--button" %>
+              <%= link_to "Mon compte", user_path, class: "dropdown-item" %>
+              <%= link_to "Se déconnecter", destroy_user_session_path, data: { turbo_method: :delete }, class: "dropdown-item dropdown-item--button" %>
             </div>
           </details>
         </div>

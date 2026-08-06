@@ -20,7 +20,7 @@ class WordsController < ApplicationController
 
   def update
     if @word.update(word_params)
-      redirect_to @child, notice: "Mot mis à jour."
+      redirect_to @child, notice: "Mot mis à jour.", status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end
