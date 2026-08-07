@@ -1,6 +1,6 @@
 class WordsController < ApplicationController
-  before_action :set_child
-  before_action :set_word, only: [ :edit, :update, :destroy ]
+  before_action :set_child, only: [ :new, :create ]
+  before_action :set_word, only: [ :show, :edit, :update, :destroy ]
 
   def new
     @word = @child.words.new
@@ -28,7 +28,7 @@ class WordsController < ApplicationController
 
   def destroy
     @word.destroy
-    redirect_to @child, notice: "Mot supprimé."
+    redirect_to @child, notice: "Mot supprimé.", status: :see_other
   end
 
   private
@@ -38,7 +38,8 @@ class WordsController < ApplicationController
   end
 
   def set_word
-    @word = @child.words.find(params[:id])
+    @word  = current_user.words.find(params[:id])
+    @child = @word.child
   end
 
   def word_params
