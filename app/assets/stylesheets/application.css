@@ -10,6 +10,30 @@
  */
 body {
   margin: 0px;
+    font-family: "Nunito", sans-serif;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+  .danger-zone {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 1px solid #e8c4b8;
+  border-radius: 14px;
+}
+
+.danger-zone h3 { color: #b03a2e; margin-top: 0; }
+
+.btn-danger {
+  background: #b03a2e;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .table {
@@ -455,3 +479,42 @@ body {
 
 .site-footer-credit { color: #7a6a60; margin: 0; }
 
+/* User show */
+.account { max-width: 34rem; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+
+.account__header h1 { font-family: "Fredoka", sans-serif; font-size: 1.9rem; margin: 0 0 .25rem; }
+.account__subtitle { font-family: "Nunito", sans-serif; color: #7a6a63; margin: 0 0 1.75rem; }
+
+.account__card {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+.account__card h2 { font-family: "Fredoka", sans-serif; font-size: 1.05rem; color: #e2725b; margin: 0 0 1rem; }
+.account__card--quiet { background: #faf5f2; box-shadow: none; }
+
+.account__list div { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem 0; border-bottom: 1px solid #f0e8e4; }
+.account__list div:last-child { border-bottom: 0; }
+.account__list dt { font-family: "Nunito", sans-serif; color: #7a6a63; font-size: .9rem; }
+.account__list dd { font-family: "Nunito", sans-serif; font-weight: 600; margin: 0; text-align: right; word-break: break-all; }
+
+.account__stats { display: flex; gap: .75rem; list-style: none; padding: 0; margin: 0 0 1rem; }
+.account__stats li { flex: 1; text-align: center; background: #faf5f2; border-radius: .9rem; padding: .85rem .5rem; font-family: "Nunito", sans-serif; font-size: .8rem; color: #7a6a63; }
+.account__number { display: block; font-family: "Fredoka", sans-serif; font-size: 1.6rem; color: #e2725b; line-height: 1.1; }
+
+.account__children { list-style: none; padding: 0; margin: 0 0 1rem; font-family: "Nunito", sans-serif; }
+.account__children li { display: flex; justify-content: space-between; padding: .55rem 0; border-bottom: 1px solid #f0e8e4; }
+.account__children li:last-child { border-bottom: 0; }
+.account__children span { color: #7a6a63; font-size: .85rem; }
+
+.account__last { font-family: "Nunito", sans-serif; font-size: .9rem; color: #7a6a63; margin: 0; }
+.account__links { list-style: none; padding: 0; margin: 0; font-family: "Nunito", sans-serif; }
+.account__links li { padding: .4rem 0; }
+
+.account__actions { display: flex; flex-direction: column; gap: .6rem; margin-top: 1.5rem; }
+
+.button { display: block; text-align: center; padding: .8rem 1rem; border-radius: .9rem; font-family: "Nunito", sans-serif; font-weight: 600; text-decoration: none; }
+.button--ghost { border: 1.5px solid #e2725b; color: #e2725b; }
+.button--danger { color: #b3453a; }

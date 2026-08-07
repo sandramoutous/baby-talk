@@ -1,0 +1,88 @@
+<section class="account">
+  <%= link_to "← Retour aux enfants", children_path, class: "legal-back" %>
+
+  <header class="account__header">
+    <h1>Mon compte</h1>
+    <p class="account__subtitle">Vos informations et données enregistrées.</p>
+  </header>
+
+  <div class="account__card">
+    <h2>Informations</h2>
+    <dl class="account__list">
+      <div>
+        <dt>Adresse e-mail</dt>
+        <dd><%= @user.email %></dd>
+      </div>
+      <div>
+        <dt>Membre depuis</dt>
+        <dd><%= @user.created_at.strftime("%d/%m/%Y") %></dd>
+      </div>
+    </dl>
+    <%= link_to "Modifier mon e-mail ou mon mot de passe",
+                edit_user_registration_path,
+                class: "button button--ghost" %>
+  </div>
+
+  <div class="account__card">
+    <h2>Mes données</h2>
+    <ul class="account__stats">
+      <li>
+        <span class="account__number"><%= @children.size %></span>
+        <%= "enfant".pluralize(@children.size) %>
+      </li>
+      <li>
+        <span class="account__number"><%= @words_count %></span>
+        <%= "mot".pluralize(@words_count) %>
+      </li>
+      <li>
+        <span class="account__number"><%= @audio_count %></span>
+        <%= "enregistrement".pluralize(@audio_count) %>
+      </li>
+    </ul>
+
+    <% if @children.any? %>
+      <ul class="account__children">
+        <% @children.each do |child| %>
+          <li>
+            <%= link_to child.name, child_path(child) %>
+            <span><%= child.words.size %> <%= "mot".pluralize(child.words.size) %></span>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <% if @last_word %>
+      <p class="account__last">
+        Dernier mot ajouté : <strong><%= @last_word.baby_version %></strong>,
+        le <%= @last_word.said_on.strftime("%d/%m/%Y") %>.
+      </p>
+    <% end %>
+  </div>
+
+  <div class="account__card account__card--quiet">
+    <h2>En savoir plus</h2>
+    <ul class="account__links">
+      <li><%= link_to "Politique de confidentialité", privacy_policy_path %></li>
+      <li><%= link_to "Conditions d'utilisation", general_terms_path %></li>
+    </ul>
+  </div>
+
+  <div class="account__actions">
+    <%= link_to "Se déconnecter", destroy_user_session_path,
+                data: { turbo_method: :delete },
+                class: "button button--ghost" %>
+  </div>
+  <div class="danger-zone">
+    <h3>Supprimer mon compte</h3>
+    <p>
+      Cette action supprime définitivement votre compte, les fiches de vos enfants,
+      tous les mots enregistrés et les fichiers audio associés.
+      Elle est irréversible.
+    </p>
+    <%= button_to "Supprimer définitivement mon compte",
+          registration_path(:user),
+          method: :delete,
+          class: "btn-danger",
+          data: { turbo_confirm: "Supprimer définitivement votre compte et toutes vos données ? Cette action est irréversible." } %>
+  </div>
+</section>
