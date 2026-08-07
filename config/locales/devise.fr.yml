@@ -18,7 +18,7 @@ fr:
       confirmation_instructions:
         subject: "Instructions de confirmation"
       reset_password_instructions:
-        subject: "Instructions de réinitialisation du mot de passe"
+        subject: "Réinitialisation de votre mot de passe"
       unlock_instructions:
         subject: "Instructions de déverrouillage"
       email_changed:
