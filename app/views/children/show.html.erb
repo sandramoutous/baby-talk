@@ -25,6 +25,11 @@
             <span class="word-arrow">→</span>
             <span class="word-real-meaning"><%= word.real_meaning %></span>
           </div>
+          <div>
+            <% if word.audio.attached? %>
+              <audio controls preload="none" src="<%= url_for(word.audio) %>"></audio>
+            <% end %>
+          </div>
         </td>
         <td class="word-date"><%= word.said_on&.strftime("%d/%m/%Y") %></td>
         <td>
