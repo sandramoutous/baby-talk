@@ -20,7 +20,19 @@
   </div>
 
   <div class="field">
-    <%= f.label :audio, "Enregistrement (optionnel)" %>
+    <% if @word.audio.attached? %>
+      <p class="field__label">Enregistrement actuel</p>
+      <audio controls preload="none" src="<%= url_for(@word.audio) %>"></audio>
+
+      <label class="field__checkbox">
+        <%= f.check_box :remove_audio %>
+        Supprimer cet enregistrement
+      </label>
+
+      <%= f.label :audio, "Remplacer l'enregistrement (optionnel)" %>
+    <% else %>
+      <%= f.label :audio, "Enregistrement (optionnel)" %>
+    <% end %>
     <%= f.file_field :audio, accept: "audio/*" %>
   </div>
 
