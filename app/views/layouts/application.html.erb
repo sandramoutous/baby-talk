@@ -50,6 +50,7 @@
         </div>
       <% end %>
     </nav>
+    <% if notice %><p class="flash flash--notice"><%= notice %></p><% end %>
     <%= yield %>
     <%= render "shared/footer" %>
   </body>
