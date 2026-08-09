@@ -518,3 +518,19 @@ a {
 .button { display: block; text-align: center; padding: .8rem 1rem; border-radius: .9rem; font-family: "Nunito", sans-serif; font-weight: 600; text-decoration: none; }
 .button--ghost { border: 1.5px solid #e2725b; color: #e2725b; }
 .button--danger { color: #b3453a; }
+
+/* form errors devise */
+.form__errors {
+  background: #fdf0ee;
+  border-radius: .9rem;
+  padding: .9rem 1rem;
+  margin-bottom: 1.2rem;
+}
+.form__errors ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-family: "Nunito", sans-serif;
+  font-size: .9rem;
+  color: #b3453a;
+}
+.form__errors li { padding: .15rem 0; }

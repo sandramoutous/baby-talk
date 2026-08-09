@@ -1,0 +1,26 @@
+fr:
+  activerecord:
+    models:
+      user: "utilisateur"
+      child: "enfant"
+      word: "mot"
+    attributes:
+      user:
+        email: "Adresse e-mail"
+        password: "Mot de passe"
+        password_confirmation: "Confirmation du mot de passe"
+        current_password: "Mot de passe actuel"
+    errors:
+      messages:
+        taken: "est déjà utilisée"
+        blank: "doit être renseigné"
+        too_short: "est trop court (minimum %{count} caractères)"
+        confirmation: "ne correspond pas"
+        invalid: "n'est pas valide"
+  errors:
+    messages:
+      taken: "est déjà utilisée"
+      blank: "doit être renseigné"
+      too_short: "est trop court (minimum %{count} caractères)"
+      confirmation: "ne correspond pas"
+      invalid: "n'est pas valide"
