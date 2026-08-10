@@ -89,6 +89,10 @@
     color: var(--color-bg);
 }
 
+.btn-mb-2 {
+    margin-bottom: 1em;
+}
+
 /* Bulles flottantes en arrière-plan */
 .floating-words {
     position: absolute;
@@ -127,5 +131,5 @@
 
 @media (max-width: 600px) {
     .word { display: none; }
-    .word-1, .word-3, .word-2 { display: block; opacity: 0.3; }
+    .word-1, .word-3, .word-2 { display: block; opacity: 0.2; }
 }
