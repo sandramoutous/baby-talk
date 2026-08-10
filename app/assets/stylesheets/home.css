@@ -111,7 +111,7 @@
 
 .word-1 { top: 12%; left: 8%; background: var(--color-secondary); color: var(--color-bg); animation-delay: 0s; }
 .word-2 { top: 20%; right: 10%; animation-delay: 1.5s; }
-.word-3 { bottom: 30%; left: 12%; background: var(--color-accent); color: var(--color-ink); animation-delay: 0.8s; }
+.word-3 { bottom: 22%; left: 12%; background: var(--color-accent); color: var(--color-ink); animation-delay: 0.8s; }
 .word-4 { bottom: 15%; right: 15%; animation-delay: 2.2s; }
 .word-5 { top: 55%; left: 4%; animation-delay: 1s; }
 .word-6 { top: 65%; right: 6%; background: var(--color-primary); color: var(--color-bg); animation-delay: 2.8s; }
@@ -127,5 +127,5 @@
 
 @media (max-width: 600px) {
     .word { display: none; }
-    .word-1, .word-3 { display: block; opacity: 0.3; }
+    .word-1, .word-3, .word-2 { display: block; opacity: 0.3; }
 }
