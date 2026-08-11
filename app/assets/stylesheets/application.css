@@ -10,12 +10,21 @@
  */
 body {
   margin: 0px;
-    font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 a {
   color: var(--color-primary);
 }
+
+.app-body {
+  min-height: 100dvh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main { flex: 1; }
 
   .danger-zone {
   margin-top: 3rem;
@@ -454,7 +463,7 @@ a {
 
 /* Footer */
 .site-footer {
-  margin-top: 4rem;
+  margin-top: auto;
   padding: 2rem 1.25rem;
   border-top: 1px solid #ebe3d7;
   text-align: center;
@@ -542,6 +551,7 @@ a {
   border-radius: .9rem;
   font-family: "Nunito", sans-serif;
   text-align: center;
+  position: fixed;
 }
 .flash--notice { background: #eaf6ef; color: #2f6b47; }
 .flash--alert  { background: #fdf0ee; color: #b3453a; }
