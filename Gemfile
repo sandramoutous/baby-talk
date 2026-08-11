@@ -69,4 +69,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "aws-sdk-s3", "~> 1.228"
+gem "aws-sdk-s3", "~> 1.229"
