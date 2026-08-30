@@ -4,4 +4,34 @@
     --color-secondary: #3A6EA5;
     --color-accent: #F2C14E;
     --color-ink: #33291F;
+    --color-danger: #b3453a;
+    --color-text: #4a3f3a;
+    --color-text-muted: #7a6a60;
+    --color-surface: #fff;
+    --color-surface-hover: #faf5f2;
+    --color-danger-hover: #fdf0ee;
+    --color-border: #ebe3d7;
+
+    --radius-sm: .6rem;
+    --radius-md: .9rem;
+    --radius-full: 999px;
+
+    --shadow-md: 0 4px 18px rgba(0,0,0,.12);
+
+    --touch-target: 44px;
+    --font-ui: "Nunito", system-ui, sans-serif;
+    --font-display: "Fredoka", system-ui, sans-serif;
+
+    --page-gutter: 1rem;
+    --card-padding: 1.25rem;
+    --card-max-width: 400px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+@media (min-width: 480px) {
+  :root {
+    --page-gutter: 2rem;
+    --card-padding: 2.5rem;
+  }
 }

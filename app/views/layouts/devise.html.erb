@@ -11,6 +11,7 @@
     <%= javascript_importmap_tags %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body class="auth-page">
     <div class="auth-card">
@@ -24,6 +25,7 @@
         </svg>
         <span class="auth-brand">mots-denfants</span>
       </div>
+      <%= render "shared/flash" %>
       <%= yield %>
     </div>
   </body>

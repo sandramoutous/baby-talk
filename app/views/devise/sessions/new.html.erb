@@ -17,7 +17,7 @@
 
       <div class="form__field">
         <%= f.label :password %>
-        <%= f.password_field :password, autocomplete: "new-password" %>
+        <%= f.password_field :password, autocomplete: "current-password" %>
         <% if @minimum_password_length %>
           <span class="form__help"><%= @minimum_password_length %> caractères minimum</span>
         <% end %>
@@ -28,6 +28,6 @@
   </div>
 
   <div class="account__actions">
-    <%= link_to "Créer un compte", new_user_registration_path, class: "button button--ghot" %>
+    <%= link_to "Créer un compte", new_user_registration_path, class: "button button--ghost" %>
   </div>
 </section>
