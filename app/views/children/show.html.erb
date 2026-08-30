@@ -8,22 +8,36 @@
       <% end %>
       <h1><%= @child.name %></h1>
     </div>
-    <div class="header-actions">
-      <%= link_to "Modifier", edit_child_path(@child), class: "btn-secondary" %>
-      <%= link_to "Ajouter un mot", new_child_word_path(@child), class: "btn-primary" %>
-    </div>
+    <details class="menu">
+      <summary class="icon-action" title="Options" aria-label="Options">
+        <%= icon :menu %>
+      </summary>
+      <div class="menu-dropdown">
+        <%= link_to "Modifier la fiche", edit_child_path(@child), class: "menu-item" %>
+        <%= link_to "Imprimer l'affiche", printout_child_path(@child), class: "menu-item" %>
+        <%= button_to "Supprimer #{@child.name}", child_path(@child), method: :delete,
+                      class: "menu-item menu-item--danger",
+                      form: { data: { turbo_confirm: "Supprimer #{@child.name} et tous ses mots ?" } } %>
+      </div>
+    </details>
+    <%= link_to "+ Ajouter un mot", new_child_word_path(@child), class: "button button--secondary button--full" %>
   </div>
+  <%#= link_to edit_word_path(word), class: "word-action", title: "Modifier",
+            aria: { label: "Modifier" } do %>
+    <%#= icon :pencil %>
+  <%# end %>
 
-  <table class="table">
+  <table>
     <% @words.each do |word| %>
       <tr class="words-list">
         <td class="word-item">
           <div class="word-main">
-            <span class="word-baby-version">
-              « <%= word.baby_version %> »
-              </span>
+            <span class="word-baby-version">« <%= word.baby_version %> »</span>
+            <br>
             <span class="word-arrow">→</span>
             <span class="word-real-meaning"><%= word.real_meaning %></span>
+            <br>
+            <%= word.said_on&.strftime("%d/%m/%Y") %>
           </div>
           <div>
             <% if word.audio.attached? %>

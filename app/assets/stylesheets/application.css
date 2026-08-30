@@ -61,6 +61,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-items: flex-start;
   margin-bottom: 2rem;
   flex-wrap: wrap;
   gap: 1rem;
@@ -76,7 +77,21 @@ a {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex: 1;
+  min-width: 0;
+  flex-wrap: nowrap;
+  align-items: flex-start;
 }
+
+.title-row .back-button { flex-shrink: 0; }
+
+.title-row h1 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  margin-top: 0;
+}
+
+.dashboard-header > .menu { flex-shrink: 0; }
 
 .back-button {
   display: flex;
@@ -527,6 +542,8 @@ a {
 .button { display: block; text-align: center; padding: .8rem 1rem; border-radius: .9rem; font-family: "Nunito", sans-serif; font-weight: 600; text-decoration: none; }
 .button--ghost { border: 1.5px solid #e2725b; color: #e2725b; }
 .button--danger { color: #b3453a; }
+.button--secondary { background-color: #e2725b; color: white; }
+.button--full { flex-basis: 100%; }
 
 /* form errors devise */
 .form__errors {

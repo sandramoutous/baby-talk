@@ -1,4 +1,11 @@
 <div class="form-page">
-  <h1>Nouveau mot pour <%= @child.name %></h1>
+  <div class="title-row">
+    <%= link_to @child, class: "back-button" do %>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    <% end %>
+    <h1>Nouveau mot pour <%= @child.name %></h1>
+  </div>
   <%= render "form" %>
 </div>
