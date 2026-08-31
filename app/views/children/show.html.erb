@@ -22,41 +22,39 @@
     </details>
     <%= link_to "+ Ajouter un mot", new_child_word_path(@child), class: "button button--secondary button--full" %>
   </div>
-  <%#= link_to edit_word_path(word), class: "word-action", title: "Modifier",
-            aria: { label: "Modifier" } do %>
-    <%#= icon :pencil %>
-  <%# end %>
 
-  <table>
-    <% @words.each do |word| %>
-      <tr class="words-list">
-        <td class="word-item">
-          <div class="word-main">
-            <span class="word-baby-version">« <%= word.baby_version %> »</span>
-            <br>
-            <span class="word-arrow">→</span>
-            <span class="word-real-meaning"><%= word.real_meaning %></span>
-            <br>
-            <%= word.said_on&.strftime("%d/%m/%Y") %>
-          </div>
-          <div>
-            <% if word.audio.attached? %>
-              <audio controls preload="none" src="<%= url_for(word.audio) %>"></audio>
-            <% end %>
-          </div>
-        </td>
-        <td class="word-date"><%= word.said_on&.strftime("%d/%m/%Y") %></td>
-        <td>
-          <div class="word-actions">
-            <%= link_to "Modifier", edit_child_word_path(@child, word) %>
-            <%= link_to "Supprimer", child_word_path(@child, word), data: { turbo_method: :delete, turbo_confirm: "Supprimer ce mot ?" } %>
-          </div>
-        </td>
-      </tr>
-    <% end %>
-  </table>
+  <% @words.each do |word| %>
+    <div class="word-item">
+      <div>
+        <span class="word-baby-version">« <%= word.baby_version %> »</span>
+        <br>
+        <span class="word-real-meaning"><%= word.real_meaning %></span>
+        <br>
+        <span class="word-date">Enregistré le <%= word.said_on&.strftime("%d/%m/%Y") %></span>
+      </div>
+      <div>
+        <% if word.audio.attached? %>
+          <audio controls preload="none" src="<%= url_for(word.audio) %>"></audio>
+        <% end %>
+      </div>
+      <div class="icon-actions" style="margin-left: auto;">
+        <%= link_to edit_child_word_path(@child, word), class: "icon-action",
+                    title: "Modifier", aria: { label: "Modifier" } do %>
+          <%= icon :pencil %>
+        <% end %>
+
+        <%= link_to child_word_path(@child, word), class: "icon-action icon-action--danger",
+                    title: "Supprimer", aria: { label: "Supprimer" },
+                    data: { turbo_method: :delete, turbo_confirm: "Supprimer ce mot ?" } do %>
+          <%= icon :trash %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 
   <% if @words.empty? %>
     <p class="empty-state">Aucun mot enregistré pour l'instant.</p>
+  <% else %>
+    <%= link_to "Imprimer l'affiche", printout_child_path(@child), class: "button button--ghost" %>
   <% end %>
 </div>

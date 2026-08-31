@@ -121,6 +121,7 @@ a {
   background: #ffffff;
   border-radius: 16px;
   padding: 1.5rem;
+  margin-bottom: 1rem;
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   display: flex;
@@ -145,21 +146,15 @@ a {
   color: var(--color-secondary);
 }
 
-.words-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .word-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   background: #ffffff;
   border-radius: 12px;
   padding: 1rem 1.2rem;
-  margin-bottom: 0.6rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .word-content {
@@ -180,33 +175,11 @@ a {
   text-decoration: none;
 }
 
-.header-actions {
-  display: flex;
-  gap: 0.6rem;
-}
-
-.empty-state {
-  text-align: center;
-  color: var(--color-ink);
-  opacity: 0.6;
-  margin-top: 2rem;
-}
-
-.word-main {
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-}
-
 .word-baby-version {
   font-family: "Fredoka", sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
   color: var(--color-primary);
-}
-
-.word-arrow {
-  color: var(--color-secondary);
 }
 
 .word-real-meaning {
@@ -221,6 +194,18 @@ a {
   color: var(--color-ink);
   opacity: 0.6;
   margin: 0.4rem 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--color-ink);
+  opacity: 0.6;
+  margin-top: 2rem;
 }
 
 .form-page {
