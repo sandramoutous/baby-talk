@@ -1,0 +1,33 @@
+<div class="dashboard-home">
+  <header class="dashboard-welcome">
+    <div class="rainbow-wrapper" aria-hidden="true">
+      <svg viewBox="0 0 200 100" class="rainbow">
+        <path d="M 10 100 A 90 90 0 0 1 190 100" fill="none" stroke="var(--color-primary)" stroke-width="16" stroke-linecap="round"/>
+        <path d="M 28 100 A 72 72 0 0 1 172 100" fill="none" stroke="var(--color-accent)" stroke-width="16" stroke-linecap="round"/>
+        <path d="M 46 100 A 54 54 0 0 1 154 100" fill="none" stroke="var(--color-secondary)" stroke-width="16" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h1>Bienvenue</h1>
+    <% if @last_word %>
+      <p class="dashboard-last">
+        Dernier mot ajouté il y a <%= time_ago_in_words(@last_word.created_at) %>
+      </p>
+    <% end %>
+  </header>
+
+  <div class="quick-actions">
+    <% @children.each do |child| %>
+      <%= link_to new_child_word_path(child), class: "quick-action" do %>
+        
+        <span class="quick-action__label"><%= child.name %> a dit…</span>
+        
+      <% end %>
+    <% end %>
+
+    <%= link_to new_child_path, class: "quick-action quick-action--ghost" do %>
+      <span class="quick-action__plus">+</span> Ajouter un enfant
+    <% end %>
+  </div>
+
+  <%= link_to "Voir tous mes enfants", children_path, class: "dashboard-link" %>
+</div>

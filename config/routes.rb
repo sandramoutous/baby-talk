@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   root "home#index"
+  get "tableau-de-bord", to: "home#dashboard", as: :dashboard
   resources :children do
     resources :words, only: [ :new, :create, :edit, :update, :destroy ]
   end
